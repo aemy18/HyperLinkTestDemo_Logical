@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_small"
+        android:background="@drawable/btn_selector"
+        android:paddingStart="@dimen/padding_xxxlarge"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_xxxlarge"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="@string/lbl_add"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_size_xlarge"
+        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+        app:layout_constraintTop_toTopOf="@+id/btnDelete" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_small"
+        android:layout_marginEnd="@dimen/padding_small"
+        android:background="@drawable/btn_selector"
+        android:paddingStart="@dimen/padding_xxxlarge"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_xxxlarge"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="@string/lbl_delete"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_size_xlarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginEnd="@dimen/padding_small"
+        android:hint="@string/lbl_input_here"
+        android:inputType="text|textNoSuggestions"
+        app:layout_constraintEnd_toStartOf="@+id/btnAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDelete" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerLeft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/padding_huge"
+        android:layout_marginEnd="@dimen/padding_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCopyL2R"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnCopyL2R"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_huge"
+        android:background="@drawable/btn_selector"
+        android:paddingStart="@dimen/padding_xxxlarge"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_xxxlarge"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="@string/lbl_copy_right"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_size_standard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnCopyR2L"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_small"
+        android:background="@drawable/btn_selector"
+        android:paddingStart="@dimen/padding_xxxlarge"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_xxxlarge"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="@string/lbl_copy_left"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_size_standard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCopyL2R" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnMoveL2R"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_small"
+        android:background="@drawable/btn_selector"
+        android:paddingStart="@dimen/padding_xxxlarge"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_xxxlarge"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="@string/lbl_move_right"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_size_standard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCopyR2L" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnMoveR2L"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_small"
+        android:background="@drawable/btn_selector"
+        android:paddingStart="@dimen/padding_xxxlarge"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_xxxlarge"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="@string/lbl_move_left"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_size_standard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMoveL2R" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnSwap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_small"
+        android:background="@drawable/btn_selector"
+        android:paddingStart="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_large"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="@string/lbl_swap"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_size_standard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMoveR2L" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_huge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCopyL2R"
+        app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

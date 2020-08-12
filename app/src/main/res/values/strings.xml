@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AndroidTestPractical</string>
+    <string name="lbl_add">Add</string>
+    <string name="lbl_delete">Delete</string>
+    <string name="lbl_input_here">Enter</string>
+
+    <string name="lbl_copy_right">Copy&gt;&gt;</string>
+    <string name="lbl_copy_left">Copy&lt;&lt;</string>
+
+    <string name="lbl_move_right">Move&gt;&gt;</string>
+    <string name="lbl_move_left">Move&lt;&lt;</string>
+
+    <string name="lbl_swap">&lt;&lt;Swap&gt;&gt;</string>
+
+</resources>
